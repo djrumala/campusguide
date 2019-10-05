@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingBottom="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="8dp">
+
+    <TextView
+        android:id="@+id/review"
+        android:layout_width="match_parent"
+        android:text="Jalan Kejawan Putih tambak XX, Nomor 32eru mahan BMA, Kejawan Putih Tamba, Mulyorejo 600112"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:textSize="15sp"
+        android:layout_marginRight="24dp"/>
+
+    <!--<TextView-->
+    <!--android:id="@+id/year"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:text="1990"-->
+    <!--android:layout_below="@+id/genre"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textColor="@color/colorAccent" />-->
+
+
+</RelativeLayout>

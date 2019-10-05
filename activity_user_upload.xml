@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserUploadActivity">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:onClick="ClosePage"
+            android:padding="12dp"
+            android:src="@drawable/cross" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_toRightOf="@+id/logo"
+            android:text="Dewinda Julianensi Rumala"
+            android:textColor="@color/colorDark"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginStart="16dp"
+            android:layout_toRightOf="@+id/logo"
+            android:text="Lionel Motor"
+            android:textColor="@color/colorDark"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/room"
+            android:layout_marginStart="16dp"
+            android:layout_toRightOf="@+id/logo"
+            android:text="Posting pada publik"
+            android:textSize="13sp" />
+
+        <ImageButton
+            android:id="@+id/setting"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:onClick="SavePost"
+            android:padding="6dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/send" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/choose"
+        android:adjustViewBounds="true"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/choose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/action_bar"
+        android:background="?android:attr/selectableItemBackground"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/cam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:elevation="2dp"
+            android:onClick="AddCamera"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:id="@+id/iv_cam"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:onClick="AddCamera"
+                android:src="@drawable/camera" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_cam"
+                android:layout_centerHorizontal="true"
+                android:onClick="AddCamera"
+                android:text="Pilih dari kamera"
+                android:textColor="@android:color/black" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:elevation="2dp"
+            android:onClick="AddGallery"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:id="@+id/iv_gallery"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_centerHorizontal="true"
+                android:onClick="AddGallery"
+                android:src="@drawable/gallery" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_gallery"
+                android:layout_centerHorizontal="true"
+                android:onClick="AddGallery"
+                android:text="Pilih dari galeri"
+                android:textColor="@android:color/black" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

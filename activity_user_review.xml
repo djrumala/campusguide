@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".UserReviewActivity">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:padding="12dp"
+            android:onClick="ClosePage"
+            android:src="@drawable/cross" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_toRightOf="@+id/logo"
+            android:text="Dewinda Julianensi Rumala"
+            android:textColor="@color/colorDark"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginStart="16dp"
+            android:layout_toRightOf="@+id/logo"
+            android:text="Lionel Motor"
+            android:textColor="@color/colorDark"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/room"
+            android:layout_marginStart="16dp"
+            android:layout_toRightOf="@+id/logo"
+            android:text="Posting pada publik"
+            android:textSize="13sp" />
+
+        <ImageButton
+            android:id="@+id/post"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:onClick="SavePost"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="6dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/send" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/action_bar">
+
+        <EditText
+            android:id="@+id/et_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="top|left"
+            android:background="@android:color/white"
+            android:hint="Tulis ulasan anda di sini"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:lines="3"
+            android:maxLines="3"
+            android:minLines="3"
+            android:padding="8dp"
+            android:scrollbars="vertical"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
